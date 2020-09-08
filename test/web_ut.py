@@ -7,13 +7,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-parent_dir = os.path.dirname(os.path.abspath(__file__))
-print('===>'+parent_dir)
+
+parent_dir = os.path.abspath(os.path.dirname(os.getcwd()))
 class ISelenium(unittest.TestCase):
     # 读入配置文件
     def get_config(self):
         config = configparser.ConfigParser()
-        config.read("/Users/zhangniuniu/Desktop/python项目/iSelenium_Python/iselenium.ini")
+        config.read(parent_dir+"/iselenium.ini")
         return config
 
     def tearDown(self):
