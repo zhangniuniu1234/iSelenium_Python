@@ -13,7 +13,7 @@ class ISelenium(unittest.TestCase):
     # 读入配置文件
     def get_config(self):
         config = configparser.ConfigParser()
-        config.read(parent_dir+"/iselenium.ini")
+        config.read("/Users/zhangniuniu/Desktop/python项目/iSelenium_Python/iselenium.ini")
         return config
 
     def tearDown(self):
